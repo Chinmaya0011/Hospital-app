@@ -1,0 +1,116 @@
+.department-section {
+    padding: 40px 0;
+    text-align: center;
+    height: 60vh;
+  }
+  
+  .department-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .department-card {
+    position: relative;
+    width: calc(25% - 20px);
+    margin: 5px;
+    padding: 20px;
+    border: 0px solid #ddd;
+    box-shadow: 2px 4px mediumvioletred;
+    text-align: center;
+    border-radius: 7px;
+    transition: transform 0.3s ease-in;
+      /* Adding the transition property */
+}
+
+.department-card:hover {
+  transform: translateX(-2px) translateY(-2px);
+    box-shadow: -2px -2px 2px 0 #69db5a; /* Applying the scale transform on hover */
+}
+
+  
+  .department-card h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .department-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .department-card p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .department-card ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .department-card li {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .get-quote-button {
+    background-color: #007bff6f;
+    color: white;
+    border: none;
+    padding: 6px 12px; /* Adjust padding to make the button smaller */
+    border-radius: 5px; /* Adjust border-radius for a smaller roundness */
+    font-size: 14px; /* Adjust font size */
+    cursor: pointer;
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.get-quote-button:hover {
+    background-color: #48b300;
+}
+/* Department.css */
+
+/* ... Existing styles ... */
+
+/* Apply styles for screens with a maximum width of 768px (mobile devices) */
+@media (max-width: 768px) {
+  .department-card {
+      width: calc(50% - 10px);
+      margin: 5px;
+  }
+  .department-section {
+    padding: 40px 0;
+    text-align: center;
+    height: 90vh;
+  }
+  
+
+  .department-card img {
+      width: 60px;
+      height: 60px;
+  }
+
+  .department-card h1 {
+      font-size: 18px;
+  }
+
+  .department-card p {
+      font-size: 12px;
+  }
+
+  .department-card li {
+      font-size: 10px;
+  }
+
+  .get-quote-button {
+      padding: 4px 8px;
+      font-size: 12px;
+  }
+}

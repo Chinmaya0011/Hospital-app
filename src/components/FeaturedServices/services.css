@@ -1,0 +1,100 @@
+/* Base styles for the featured services section */
+.featured-services {
+  padding: 40px 0;
+  background-color: #f2f2f2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Styling for .service elements */
+.service {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service img {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.service h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 16px;
+}
+
+/* Rotate on hover using keyframes */
+.service:hover {
+  transform: rotate(5deg);
+  background-color: #fff;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframes for rotation */
+@keyframes rotateEffect {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+/* Apply the keyframes animation on hover */
+.service:hover {
+  animation: rotateEffect 0.2s ease-in-out;
+}
+
+/* Styling for li elements */
+.service ul {
+  list-style-type: circle;
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+.service li {
+  text-align: start;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Media Queries for Tablets */
+@media screen and (max-width: 768px) {
+  .service {
+    width: calc(50% - 20px); /* Two services per row */
+  }
+}
+
+/* Media Queries for Mobile Devices */
+@media screen and (max-width: 480px) {
+  .service {
+    width: 100%; /* Single service per row */
+  }
+}

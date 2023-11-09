@@ -1,0 +1,111 @@
+/* Header.css */
+
+/* Styling for the header container */
+.header-container {
+    background-color: #ffffff;
+    color: rgb(176, 149, 149);
+
+    height: 40px;
+}
+
+/* Styling for the navbar */
+/* Fix the navigation bar to the top */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Adjust the z-index as needed */
+}
+
+/* Styling for the logo */
+.logo-img {
+    height: 30px;
+    width: 100px;
+    margin-right: 20px; /* Add a gap between logo and navigation links */
+}
+
+/* Styling for the navigation links */
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 1rem;
+}
+
+/* Styling for navigation link hover effect */
+.navbar-nav .nav-link {
+    color: rgb(9, 6, 6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: larger;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #cbb250;
+}
+
+/* Styling for sub-menu container */
+.dropdown-menu {
+    color: #000000;
+    display: none;
+    position: absolute;
+   
+    list-style: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    left: 0;
+    top: 100%;
+    z-index: 1;
+}
+
+/* Show sub-menu on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Styling for sub-menu list items */
+.dropdown-menu li {
+    margin: 0;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.dropdown-menu a {
+    border-radius: 10px;
+ 
+    color: rgb(2, 2, 2);
+    text-decoration: none;
+    display: block;
+    padding: 0.3rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Styling for sub-menu item hover effect */
+.dropdown-menu a:hover {
+    background-color: #4eab6280;
+}
+
+/* Other CSS for new navigation items */
+/* Adjust as needed */
+.nav-item {
+    margin-right: 1rem;
+}
+
+.nav-link {
+    color: rgb(9, 6, 6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: larger;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-link:hover {
+    color: #cbb250;
+}

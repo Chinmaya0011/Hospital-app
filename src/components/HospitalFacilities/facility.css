@@ -1,0 +1,94 @@
+/* facility.css */
+
+.facility-section {
+    padding: 40px 0;
+    text-align: center;
+    height: auto;
+
+}
+.facility-section h2{
+    color: rgba(137, 194, 51, 0.774);
+}
+.facility-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.facility-card {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: height 0.3s, transform 0.3s;
+    transform-origin: center top; /* Center the scaling transformation around the top */
+    height: 300px; /* Initial height */
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 4px rgba(67, 209, 42, 0.521);
+}
+
+
+
+.facility-card-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s;
+    position: absolute; /* Position the background image absolutely */
+    top: 0;
+    left: 0;
+}
+
+
+.facility-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(171, 174, 133, 0.594);
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.facility-card:hover .facility-overlay,
+.facility-card.expanded .facility-overlay {
+    opacity: 1;
+}
+
+.facility-overlay h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.facility-overlay p {
+    font-size: 14px;
+    color: white;
+    margin: 0;
+}
+/* Mobile Devices (up to 767px width) */
+@media (max-width: 767px) {
+    .facility-section {
+        padding: 20px 0;
+        height:auto; /* Reset height for mobile */
+    }
+
+    .facility-card {
+        width: calc(50% - 20px); /* Two cards per row */
+        height: 200px; /* Reset height for mobile */
+    }
+
+    .facility-card.expanded {
+        height: auto; /* Reset height for expanded card on mobile */
+        transform: scaleY(1); /* Reset transformation for expanded card on mobile */
+    }
+}
